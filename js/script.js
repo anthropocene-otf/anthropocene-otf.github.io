@@ -16,7 +16,7 @@
 			}
 	var promise = new Promise(function(resolve, reject) {
 
-            fetch('http://api.waqi.info/feed/here/?token=a5bcabdf37b376ee2eafa3f7c72b49ea520ddc69')
+            fetch('https://api.waqi.info/feed/here/?token=a5bcabdf37b376ee2eafa3f7c72b49ea520ddc69')
             .then(response => response.json())
             .then(data => {
                 changeFont(data.data.aqi);
