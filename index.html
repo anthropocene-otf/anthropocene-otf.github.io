@@ -12,6 +12,10 @@
     code {
         font-family: monospace !important;
     }
+    .code-container{
+        padding: 10px;
+        border: 1px solid grey;
+    }
 </style>
 
 <body>
@@ -21,8 +25,14 @@
 ANTHROPOCENE.OTF IS A PARAMETRIC TYPEFACE WHICH, DISTRIBUTED FREE OF CHARGE AND LINKED TO AN AIR QUALITY INDEX, WILL CHANGE ITS DESIGN BASED ON AIR QUALITY: THOSE WHO WANT TO CHANGE THE PARAMETERS OF THE CHARACTER, WILL HAVE TO DO IT IN THE REAL WORLD, DECIDING TO REDUCE THEIR CARBON FOOTPRINT OR PROMOTING VIRTUOUS BEHAVIOR THANKS TO THE USE OF THIS CHARACTER.
 </p>
 <h3>How to use it</h3>
-Embed the JS code into your website or web app:
-<code>&lt;script src="https://anthropocene-otf.github.io/cdn/anthropocene-script.js"&gt;&lt;/script&gt;</code>
+Embed the JS code into your website or web app:<br>
+<div class="code-container">
+    <code>&lt;script src="https://anthropocene-otf.github.io/cdn/anthropocene-script.js"&gt;&lt;/script&gt;</code>
+</div>
+Then add the css rule on the elements where you want the font to be displayed:<br>
+<div class="code-container">
+<code>font-family: "Anthropocene";</code>
+</div>
 <p id="average"></p>
 </body>
 <script src="js/script.js"></script>
