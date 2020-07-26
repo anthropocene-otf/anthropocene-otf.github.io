@@ -58,7 +58,7 @@ function changeFont(num){
     newStyle.appendChild(document.createTextNode("\
     @font-face {\
         font-family: Anthropocene;\
-        src: url('cdn/fonts/Anthropocene00-" + userairdataPercentage + ".otf') format('opentype');\
+        src: url('cdn/fonts/Anthropocene-" + userairdataPercentage + ".otf') format('opentype');\
     }\
     "));
 
