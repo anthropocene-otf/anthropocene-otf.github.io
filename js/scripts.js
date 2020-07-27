@@ -107,7 +107,7 @@ function download_font(){
 }
 
 function set_download_link(){
-	$("#download-link").attr("href","cdn/fonts/Anthropocene00-" + font_value + ".otf")
+	$("#download-link").attr("href","cdn/fonts/Anthropocene-" + font_value + ".otf")
 }
 
 
