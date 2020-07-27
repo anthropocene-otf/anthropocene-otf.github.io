@@ -58,7 +58,7 @@ function new_font_face(font_value) {
 }\
 "));
 	let root = document.documentElement
-	root.style.setProperty("--main-color",bg_color)
+	root.style.setProperty("--main-color",/*bg_color*/"#0b24fb")
 
 	document.head.appendChild(new_face);
 	display_page();

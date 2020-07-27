@@ -29,19 +29,19 @@ crossorigin="anonymous"></script>
 <body class="wait_page_loading">
 <div class="main-container">
 	
-	<div id="content" class="content">
-		
-	</div>
-	
 	<div id="menu" class="menu">
 		<div class="menu-links">
 			<div class="links-wrapper">
-				<div onClick="load_page('about');" class="link">-About</div>
-				<div onClick="load_page('download');" class="link">-Download</div>
-				<div onClick="load_page('get-started');" class="link">-Get Started</div>
+				<div class="link-background">
+					<div onClick="load_page('main');" class="link">Anthropocene.otf</div>
+				</div>
+				<div onClick="load_page('about');" class="link">Concept</div>
+				<div onClick="load_page('about');" class="link">Get Started</div>
+				<div onClick="load_page('download');" class="link">Download</div>
+				<div onClick="load_page('about');" class="link">About</div>
 			</div>
 		</div>
-		<div class="menu-smile"  >
+		<!--<div class="menu-smile" >
 				 <svg onClick="load_page('main');" width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
 				 <g class="spin">
 				 <ellipse cx="75" cy="80" rx="12" ry="15" />
@@ -51,29 +51,30 @@ crossorigin="anonymous"></script>
 				 stroke-width="8" fill="none" />
 				 </svg>
 				 </g>
-		</div>
+		</div>-->
 		<div class="menu-info">
 			<div class="info-container-aqi">
-				<div id="aqi"></div>
+				
 			</div>
 			<div class="info-container-values">
-				<div>
+					<div id="aqi"></div>
 					<div id="no2"></div>
 					<div id="co"></div>
 					<div id="h"></div>
 					<div id="no2"></div>
 					<div id="o3"></div>
 					<div id="p"></div>
-				</div>
-				<div>	
 					<div id="pm10"></div>
 					<div id="pm25"></div>
 					<div id="t"></div>
 					<div id="w"></div>
 					<div id="wg"></div>
-				</div>
 			</div>	
 		</div>
+	</div>
+
+	<div id="content" class="content">
+		
 	</div>
 	
 </div>
