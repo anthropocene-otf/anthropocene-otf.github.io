@@ -16,7 +16,7 @@ var font_value;
 
 /* Richiesta ad API ed elaborazione risposta */
 async function get_aqi_data() {
-	let data = await fetch("http://api.waqi.info/feed/here/?token=a5bcabdf37b376ee2eafa3f7c72b49ea520ddc69");
+	let data = await fetch("https://api.waqi.info/feed/here/?token=a5bcabdf37b376ee2eafa3f7c72b49ea520ddc69");
 	let response = await data.json();
 	console.log(response.data)
 	if (response.data.aqi >= 0 &&  response.data.aqi < 50) {
