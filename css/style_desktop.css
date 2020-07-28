@@ -453,7 +453,7 @@ svg {
     justify-content: flex-end;
     flex: 2;
     margin-left: 10px;
-    width: 50%;
+    width: 80%;
     align-self: flex-start;
 }
 
@@ -475,7 +475,6 @@ svg {
 
 .info-container-values>div {
     display: flex;
-    font-size: .8em;
     margin-bottom: 3px;
 }
 
