@@ -50,8 +50,8 @@ function new_font_face(font_value) {
 
     console.log("This site is using the Anthropocene font, find more about it http://anthropoceneotf.org")
     console.log("Your current AQI (Air  Quality Index) is " + font_value + ", read more about it here https://aqicn.org/faq/")
-        //var new_face = document.createElement('style');
-        /*new_face.appendChild(document.createTextNode("\
+    var new_face = document.createElement('style');
+    new_face.appendChild(document.createTextNode("\
 	@font-face {\
 		font-family: 'Anthropocene';\
 		src: url('./cdn/fonts/Anthropocene-" + font_value + ".otf');\
@@ -59,7 +59,6 @@ function new_font_face(font_value) {
 "));
     document.head.appendChild(new_face);
 
-*/
     let root = document.documentElement
     root.style.setProperty("--main-color", /*bg_color*/ "#0b24fb")
 
@@ -122,6 +121,7 @@ function set_download_link() {
 function load_page(page) {
     $(".link").removeClass("active")
     $("#" + page + "-link").addClass("active")
+    $(".content").animate({ scrollTop: 0 }, "slow");
     switch (page) {
         case "showcase":
             $("#content").load("./pages/showcase.html", function() {
