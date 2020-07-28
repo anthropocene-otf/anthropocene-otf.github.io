@@ -1,3 +1,11 @@
+@font-face {
+	font-family: "a-bold";
+	src: url("../cdn/fonts/Anthropocene-1.otf");
+  }
+  @font-face {
+	  font-family: "a-thin";
+	  src: url("../cdn/fonts/Anthropocene-100.otf");
+	}
 body {
 	margin: 0;
 	padding: 0;
@@ -22,7 +30,7 @@ b {
 }
 a {
 	text-decoration: underline;
-	color: black;
+	color: yellow;
 }
 a:hover {
 	cursor: pointer;
@@ -55,10 +63,27 @@ a:hover {
 
 .content {
 	padding: 12px;
-	overflow: auto;
-	height: calc(100vh - var(--menu-height));
+	overflow-y: scroll;
 }
-
+.a-bold {
+	font-family: "a-bold";
+	flex: 1;
+    text-align: center;
+	font-size: 60vw;
+	margin: -150px;
+}
+.a-thin {
+	font-family: "a-thin";
+	flex: 1;
+    text-align: center;
+	font-size: 60vw;
+	margin: -150px;
+}
+.a-container {
+	margin-top: 100px;
+	display: flex;
+	padding-bottom: 125px;
+}
 
 
 /************/
@@ -233,7 +258,11 @@ input {
 	width: 60%;
     height: 25%;
 }
-
+.typeface-container {
+	font-size: 1.5em;
+	text-align: center;
+	padding: 10px;
+}
 
 /************/
 /* DOWNLOAD */
@@ -266,19 +295,46 @@ input {
 /********/
 /* MENU */
 /********/
+#resp-menu-toggler{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+}
+#resp-menu-toggler img {
+	width: 100%;
+}
+#sky-resp {
+	z-index: -99;
+	position: fixed;
+	object-fit: fill;
+	bottom: 0;
+	opacity: .2;
+}
+#sky {
+	display: none;
+
+}
+
 
 .menu {
+	transform: translateX(-100%);
+	position: fixed;
+	transition: 1s all;
 	display: flex;
 	align-items: center;
 	margin-top: 10px;
-	background-color: white;
+	width:100%;
 
 }
 
 .menu-links {
 	flex: 4;
     display: flex;
-    justify-content: center;
+	justify-content: center;
+	color: yellow;
+    padding: 12px;
+    font-size: 2em;
 }
 
 .links-wrapper {
@@ -358,4 +414,9 @@ svg {
 .typeface-container {
 	padding: 10px;
 	border: 1px solid;
+}
+.concept-container {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 1.2em;
 }

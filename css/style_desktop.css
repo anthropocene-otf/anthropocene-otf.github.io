@@ -1,4 +1,14 @@
+@font-face {
+  font-family: "a-bold";
+  src: url("../cdn/fonts/Anthropocene-1.otf");
+}
+@font-face {
+	font-family: "a-thin";
+	src: url("../cdn/fonts/Anthropocene-100.otf");
+  }
+
 body {
+	cursor:url("../img/cursor.png"), auto;
 	margin: 0;
 	padding: 0;
 	background: /*linear-gradient(180deg, var(--main-color), rgb(255,255,255) 80%);*/ var(--main-color);
@@ -24,10 +34,10 @@ b {
 }
 a {
 	text-decoration: underline;
-	color: black;
+	color: yellow;
 }
 a:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 .spin {
 	-webkit-animation:spin 11s linear infinite;
@@ -59,12 +69,31 @@ a:hover {
 	padding: 20px;
 	overflow: auto;
 	-ms-overflow-style: none;
+	background:  var(--main-color);
 }
 
 .content::-webkit-scrollbar {
 	display: none;
 }
 
+.a-bold {
+	font-family: "a-bold";
+	flex: 1;
+    text-align: center;
+	font-size: 30vw;
+	margin: -100px;
+}
+.a-thin {
+	font-family: "a-thin";
+	flex: 1;
+    text-align: center;
+	font-size: 30vw;
+	margin: -100px;
+}
+.a-container {
+	display: flex;
+	padding-bottom: 50px;
+}
 
 /************/
 /* SHOWCASE */
@@ -104,7 +133,7 @@ a:hover {
 }
 
 .entry-body:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 
 .entry-footer {
@@ -139,7 +168,7 @@ a:hover {
 }
 
 .entry-close-button:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 
 .entry-view-main-text {
@@ -160,7 +189,7 @@ a:hover {
 }
 
 .entry-arrow:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 
 .entry-slideshow {
@@ -207,7 +236,7 @@ a:hover {
 }
 
 .custom-file-upload:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 
 .submit-button {
@@ -216,7 +245,7 @@ a:hover {
 }
 
 .submit-button:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 
 input {
@@ -237,7 +266,8 @@ input {
 
 .download-container {
 	height: 100%;
-	width: 60%;
+	width: 70%;
+	margin: 0 auto;
 	font-size: 3em;
 	padding-bottom: 10%;
 }
@@ -249,19 +279,30 @@ input {
     border: 1px solid black;
 	background-color: transparent;
 	position: fixed;
-	bottom: 10px;
-	left: 20px;
+	top: 10px;
+	right: 20px;
 }
 
 .download-button:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 
 
 /********/
 /* MENU */
 /********/
-
+#resp-menu-toggler{
+	display: none;
+}
+#sky-resp {
+	display: none;
+}
+#sky {
+	z-index: -99;
+	position: absolute;
+	object-fit: fill;
+	height: 100%;
+}
 .menu {
 	display: flex;
 	flex-direction: column;
@@ -314,10 +355,10 @@ input {
 }
 
 .link:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 .menu-smile>svg:hover {
-	cursor: pointer;
+	cursor: url("../img/cursor_hover.png"), auto;;
 }
 .menu-smile {
 	width: 50%;
@@ -331,7 +372,8 @@ svg {
 
 .main-text {
 	font-size: 3em;
-	width: 60%;
+	width: 70%;
+	margin: 0 auto;
 }
 
 .menu-info {
@@ -353,11 +395,11 @@ svg {
 
 }
 @keyframes blinkingText{
-    0%{     color: #000; background-color: var(--main-color);    }
-    49%{    color: #000; background-color: var(--main-color); }
+    0%{     color: yellow; background-color: var(--main-color);    }
+    49%{    color: yellow; background-color: var(--main-color); }
     60%{    color: var(--main-color); background-color:white; }
     99%{    color:var(--main-color);  background-color:white;}
-    100%{   color: #000;  background-color: var(--main-color);  }
+    100%{   color: yellow;  background-color: var(--main-color);  }
 }
 
 .info-container {
@@ -365,7 +407,8 @@ svg {
 }
 
 .about-container {
-	width: 60%;
+	width: 70%;
+	margin: 0 auto;
 	font-size: 3em;
 }
 .code-container {
@@ -373,10 +416,29 @@ svg {
 	border: 1px solid;
 }
 .get-started-container {
-	width: 60%;
+	width: 70%;
+	margin: 0 auto;
 	font-size: 3em;
 }
 .typeface-container {
+	font-size: 1.5em;
+	text-align: center;
 	padding: 10px;
-	border: 1px solid;
+}
+
+/************/
+/* DOWNLOAD */
+/************/
+.concept-container {
+	width: 70%;
+	margin: 0 auto;
+	font-size: 3em;
+}
+.a-bold-concept {
+	font-family: "a-bold";
+	font-size: 3em;
+}
+.a-thin-concept {
+	font-size: 3em;
+	font-family: "a-thin";
 }

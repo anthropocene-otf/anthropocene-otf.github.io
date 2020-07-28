@@ -27,16 +27,28 @@ crossorigin="anonymous"></script>
 }
 </style>
 <body class="wait_page_loading">
+	<video id="sky-resp" autoplay muted loop id="myVideo">
+		<source src="vid/sky.mp4" type="video/mp4">
+		Your browser does not support HTML5 video.
+	</video>
+	<div id="resp-menu-toggler" onClick="toggleMenu();">
+		<img src="img/cursor.png">
+  	</div>
 <div class="main-container">
-	
+
 	<div id="menu" class="menu">
+		<video id="sky" autoplay muted loop id="myVideo">
+			<source src="vid/sky.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		  </video>
+
 		<div class="menu-links">
 			<div class="links-wrapper">
 				<div class="link-background">
 					<div onClick="load_page('main');" class="link">Anthropocene.otf</div>
 				</div>
-				<div onClick="load_page('about');" class="link">Concept</div>
-				<div onClick="load_page('about');" class="link">Get Started</div>
+				<div onClick="load_page('concept');" class="link">Concept</div>
+				<div onClick="load_page('get-started');" class="link">Get Started</div>
 				<div onClick="load_page('download');" class="link">Download</div>
 				<div onClick="load_page('about');" class="link">About</div>
 			</div>

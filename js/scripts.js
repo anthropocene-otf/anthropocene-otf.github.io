@@ -128,6 +128,9 @@ function load_page(page) {
 		case "about":
 			$("#content").load("./pages/about.html", function() {});
 			break;
+		case "concept":
+			$("#content").load("./pages/concept.html", function() {});
+			break;
 		case "submit":
 			$("#content").load("./pages/submit.html", function() {});
 			break;
@@ -140,6 +143,9 @@ function load_page(page) {
 			});
 			break;
 		default:
+	}
+	if ($("#resp-menu-toggler").is(":visible")) {
+		toggleMenu();
 	}
 }
 
@@ -164,6 +170,19 @@ function create_div(className) {
 	return div;
 }
 
+/* funzione per mostrare il menu responsive */
+
+let openMenu = false;
+
+function toggleMenu(){
+	if (!openMenu) {
+		$("#menu").css("transform","translateX(0)")
+		openMenu = !openMenu
+	} else {
+		$("#menu").css("transform","translateX(-100%)")
+		openMenu = !openMenu
+	}
+}
 
 /* Helper prototype per rimappare i valori */
 Number.prototype.map = function (in_min, in_max, out_min, out_max) {
