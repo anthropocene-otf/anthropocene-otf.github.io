@@ -45,12 +45,12 @@ crossorigin="anonymous"></script>
 		<div class="menu-links">
 			<div class="links-wrapper">
 				<div class="link-background">
-					<div onClick="load_page('main');" class="link">Anthropocene.otf</div>
+					<div onClick="load_page('main');" id="main-link" class="link active">Anthropocene.otf</div>
 				</div>
-				<div onClick="load_page('concept');" class="link">Concept</div>
-				<div onClick="load_page('get-started');" class="link">Get Started</div>
-				<div onClick="load_page('download');" class="link">Download</div>
-				<div onClick="load_page('about');" class="link">About</div>
+				<div onClick="load_page('concept');" id="concept-link" class="link">Concept</div>
+				<div onClick="load_page('get-started');" id="get-started-link" class="link">Get Started</div>
+				<div onClick="load_page('download');" id="download-link" class="link">Download</div>
+				<div onClick="load_page('about');" id="about-link" class="link">About</div>
 			</div>
 		</div>
 		<!--<div class="menu-smile" >
@@ -70,17 +70,24 @@ crossorigin="anonymous"></script>
 			</div>
 			<div class="info-container-values">
 					<div id="aqi"></div>
-					<div id="no2"></div>
-					<div id="co"></div>
-					<div id="h"></div>
-					<div id="no2"></div>
-					<div id="o3"></div>
-					<div id="p"></div>
-					<div id="pm10"></div>
-					<div id="pm25"></div>
-					<div id="t"></div>
-					<div id="w"></div>
-					<div id="wg"></div>
+				<div>
+					<div>
+						<div id="no2"></div>
+						<div id="co"></div>
+						<div id="h"></div>
+						<div id="no2"></div>
+						<div id="o3"></div>
+						<div id="p"></div>
+					</div>
+					<div>
+
+						<div id="pm10"></div>
+						<div id="pm25"></div>
+						<div id="t"></div>
+						<div id="w"></div>
+						<div id="wg"></div>
+					</div>
+				</div>	
 			</div>	
 		</div>
 	</div>

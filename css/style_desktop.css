@@ -80,19 +80,20 @@ a:hover {
 	font-family: "a-bold";
 	flex: 1;
     text-align: center;
-	font-size: 30vw;
+	font-size: 50vw;
 	margin: -100px;
 }
 .a-thin {
 	font-family: "a-thin";
 	flex: 1;
     text-align: center;
-	font-size: 30vw;
+	font-size: 50vw;
 	margin: -100px;
 }
 .a-container {
 	display: flex;
 	padding-bottom: 50px;
+	margin-top: -10%;
 }
 
 /************/
@@ -266,7 +267,7 @@ input {
 
 .download-container {
 	height: 100%;
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	font-size: 3em;
 	padding-bottom: 10%;
@@ -338,6 +339,10 @@ input {
 	visibility: hidden;
 	transition: all 0.3s ease-in-out;
 }
+.active::before {
+	visibility: visible;
+	width: 100%;
+}
 
 .link:hover:before {
 	visibility: visible;
@@ -372,7 +377,7 @@ svg {
 
 .main-text {
 	font-size: 3em;
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -385,9 +390,26 @@ svg {
 	width: 50%;
     align-self: flex-start;
 }
-
+.info-container-values {
+	display: flex;
+    flex-direction: column;
+}
 .info-container-values div {
+	margin: 5px 0;
+	cursor:url("../img/cursor.png"), auto;
+}
+#aqi {
+	border-bottom: 1px solid;
+	font-size: 1em;
+}
+
+.info-container-values>div {
+	display: flex;
+	font-size: .8em;
 	margin-bottom: 3px;
+}
+.info-container-values>div>div {
+	flex: 1;
 }
 
 .blinking{
@@ -407,7 +429,7 @@ svg {
 }
 
 .about-container {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	font-size: 3em;
 }
@@ -416,7 +438,7 @@ svg {
 	border: 1px solid;
 }
 .get-started-container {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	font-size: 3em;
 }
@@ -430,7 +452,7 @@ svg {
 /* DOWNLOAD */
 /************/
 .concept-container {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	font-size: 3em;
 }

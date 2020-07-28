@@ -118,9 +118,13 @@ function set_download_link(){
 
 /* Helper per caricare le pagine nella sezione content */
 function load_page(page) {
+	$(".link").removeClass("active")
+	$("#"+page+"-link").addClass("active")
 	switch (page){
 		case "showcase":
-			$("#content").load("./pages/showcase.html", function() {load_entries()});
+			$("#content").load("./pages/showcase.html", function() {
+				load_entries()
+			});
 			break;
 		case "main":
 			$("#content").load("./pages/main.html", function() {});
@@ -144,6 +148,7 @@ function load_page(page) {
 			break;
 		default:
 	}
+
 	if ($("#resp-menu-toggler").is(":visible")) {
 		toggleMenu();
 	}
