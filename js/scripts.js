@@ -92,6 +92,9 @@ async function change_smile_mood(current_value) {
 /* Aspetta il documento prima di esegure le funzioni */
 document.addEventListener("DOMContentLoaded", function(event) {
     get_aqi_data();
+    $("body").on("click", function() {
+        $("#sky-resp")[0].autoplay = true
+    })
 });
 
 
@@ -108,7 +111,10 @@ function download_font() {
 }
 
 function set_download_link() {
-    $("#download-link").attr("href", "cdn/fonts/Anthropocene-" + font_value + ".otf")
+    console.log("download")
+    $("#download-bold").attr("href","../cdn/fonts/Anthropocene-1.otf")
+    $("#download-thin").attr("href","../cdn/fonts/Anthropocene-100.otf")
+    $("#download-aqi").attr("href", "cdn/fonts/Anthropocene-" + font_value + ".otf")
 }
 
 
@@ -144,8 +150,61 @@ function load_page(page) {
             $("#content").load("./pages/get-started.html", function() {});
             break;
         case "download":
+            let mouseIsDown = false;
             $("#content").load("./pages/download.html", function() {
                 set_download_link()
+                $('#font-playground-size-range').on('mousedown', function(event) {
+                    console.log(mouseIsDown)
+                    mouseIsDown = true
+                    if (mouseIsDown) {
+                        mouseIsDown = setInterval(function(){changeFontSize(event.target.value)}, 100 /*execute every 100ms*/);
+                    }
+                    
+                });
+                $('#font-playground-size-range').on('touchstart', function(event) {
+                    console.log(mouseIsDown)
+                    mouseIsDown = true
+                    if (mouseIsDown) {
+                        mouseIsDown = setInterval(function(){changeFontSize(event.target.value)}, 100 /*execute every 100ms*/);
+                    }
+                    
+                });
+
+                $('#font-playground-size-range').on('mouseup', function(event) {
+
+                    if (mouseIsDown != false) {
+                       clearInterval(mouseIsDown)
+                       mouseIsDown = false
+                    }
+
+                });
+                $('#font-playground-size-range').on('touchend', function(event) {
+
+                    if (mouseIsDown != false) {
+                       clearInterval(mouseIsDown)
+                       mouseIsDown = false
+                    }
+
+                });
+
+                $(".font-playground-weight-selector>label").click(function(){
+                    $(".font-playground-weight-selector>label p").css("border-bottom","0")
+                    $("."+$(this).attr('class')+" p").css("border-bottom","1px solid")
+                        switch ($(this).attr('class')) {
+                            case "font-playground-bold-select":
+                                $("#font-tryout").css("font-family","a-bold")
+                                break;
+                            case "font-playground-thin-select":
+                                $("#font-tryout").css("font-family","a-thin");
+                                break;
+                            case "font-playground-aqi-select":
+                                $("#font-tryout").css("font-family","Anthropocene");
+                                break;
+                            default:
+                        }
+
+                })
+
             });
             break;
         default:
@@ -194,4 +253,11 @@ function toggleMenu() {
 /* Helper prototype per rimappare i valori */
 Number.prototype.map = function(in_min, in_max, out_min, out_max) {
     return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+/* Playground */
+
+function changeFontSize(val){
+    //console.log(val);
+    $('#font-tryout').css("font-size",val+"em");
 }

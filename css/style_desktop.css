@@ -7,9 +7,11 @@
     font-family: "a-thin";
     src: url("../cdn/fonts/Anthropocene-100.otf");
 }
-
-body {
+html {
     cursor: url("../img/cursor.png"), auto;
+}
+body {
+   
     margin: 0;
     padding: 0;
     background: /*linear-gradient(180deg, var(--main-color), rgb(255,255,255) 80%);*/
@@ -27,7 +29,7 @@ body {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-family: "a-thin";
 }
 
@@ -36,6 +38,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-size: 2.5em;
     font-family: "a-thin";
 }
 
@@ -202,7 +205,7 @@ a:hover {
 }
 
 .entry-view-index-number {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .entry-view-close {
@@ -217,7 +220,7 @@ a:hover {
 }
 
 .entry-view-main-text {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .entry-view-slideshow {
@@ -230,7 +233,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .entry-arrow:hover {
@@ -246,7 +249,7 @@ a:hover {
 }
 
 .entry-view-date-container {
-    font-size: 3em;
+    font-size: 2em;
     display: flex;
     align-items: flex-end;
 }
@@ -297,16 +300,7 @@ a:hover {
     ;
 }
 
-input {
-    box-shadow: none;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    border-bottom: 3px solid black;
-    font-size: 1em;
-    width: 60%;
-    height: 50%;
-}
+
 
 
 /************/
@@ -321,7 +315,7 @@ input {
     height: 100%;
     width: 80%;
     margin: 0 auto;
-    font-size: 3em;
+    font-size: 2em;
     padding-bottom: 10%;
 }
 
@@ -339,6 +333,141 @@ input {
 .download-button:hover {
     cursor: url("../img/cursor_hover.png"), auto;
     ;
+}
+
+.font-playground {
+    display: flex;
+    flex-direction: column;
+}
+
+#font-tryout{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    font-family: "a-bold";
+    font-size: 2em;
+    outline: none;
+    resize: none;
+    color: white;
+    margin-bottom: 40px;
+    transition: font-size .5s;
+}
+
+.font-playground-commands {
+    display: flex;
+    flex-direction: column;
+}
+.font-playground-size-range{
+    flex: 1;
+}
+.font-playground-size-range[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  .font-playground-size-range[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  .font-playground-size-range[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  .font-playground-size-range[type=range]::-ms-track {
+    width: 100%;
+    cursor: url("../img/cursor_hover.png"), auto;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+/* Special styling for WebKit/Blink */
+.font-playground-size-range[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    cursor: url("../img/cursor_hover.png"), auto;
+    margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+  
+  /* All the same stuff for Firefox */
+  .font-playground-size-range[type=range]::-moz-range-thumb {
+
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    cursor: url("../img/cursor_hover.png"), auto;
+  }
+  
+  /* All the same stuff for IE */
+  .font-playground-size-range[type=range]::-ms-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    cursor: url("../img/cursor_hover.png"), auto;
+  }
+
+  .font-playground-size-range[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2.4px;
+    cursor: url("../img/cursor_hover.png"), auto;
+    background: white;
+    border-radius: 1.3px;
+  }
+  
+  .font-playground-size-range[type=range]:focus::-webkit-slider-runnable-track {
+    background: white;
+  }
+  
+  .font-playground-size-range[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2.4px;
+    cursor: url("../img/cursor_hover.png"), auto;
+    background: #3071a9;
+    border-radius: 1.3px;
+  }
+  
+  .font-playground-size-range[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: url("../img/cursor_hover.png"), auto;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  .font-playground-size-range[type=range]::-ms-fill-lower {
+    background: white;
+    border-radius: 2.6px;
+  }
+  .font-playground-size-range[type=range]:focus::-ms-fill-lower {
+    background: white;
+  }
+  .font-playground-size-range[type=range]::-ms-fill-upper {
+    background: white;
+    border-radius: 2.6px;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+
+
+.font-playground-weight-selector{
+    flex:1;
+    display: flex;
+    text-align: center;
+}
+.font-playground-weight-selector>label{
+    flex:1;
 }
 
 
@@ -442,7 +571,7 @@ svg {
 }
 
 .main-text {
-    font-size: 3em;
+    font-size: 2em;
     width: 80%;
     margin: 0 auto;
 }
@@ -514,7 +643,7 @@ svg {
 .about-container {
     width: 80%;
     margin: 0 auto;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .code-container {
@@ -525,7 +654,7 @@ svg {
 .get-started-container {
     width: 80%;
     margin: 0 auto;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .typeface-container {
@@ -547,15 +676,45 @@ svg {
 .concept-container {
     width: 80%;
     margin: 0 auto;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .a-bold-concept {
     font-family: "a-bold";
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .a-thin-concept {
-    font-size: 3em;
+    font-size: 2em;
     font-family: "a-thin";
+}
+
+.download-section {
+    display: flex;
+}
+.download-box {
+    flex: 1;
+    text-align: center;
+}
+.download-box, .download-box *:hover {
+    cursor: url("../img/cursor_hover.png"), auto !important;
+}
+.download-box .cover {
+    font-size: 3em;
+}
+.download-box .cover {
+    cursor: url("../img/cursor_hover.png"), auto !important;
+}
+.download-box p {
+    margin: 0;
+    cursor: url("../img/cursor_hover.png"), auto !important;
+}
+.download-bold {
+    font-family: "a-bold";
+}
+.download-thin {
+    font-family: "a-thin";
+}
+.download-aqi {
+    font-family: "Anthropocene";
 }
