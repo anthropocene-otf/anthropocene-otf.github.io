@@ -132,6 +132,7 @@ a:hover {
 }
 
 .a-container {
+    margin-top:-10%;
     display: flex;
     padding-bottom: 50px;
 }
