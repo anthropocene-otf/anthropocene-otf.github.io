@@ -36,6 +36,17 @@
 				<label class="font-playground-aqi-select">
 					<p>Current AQI Value</p>
 			</div>
+			<div class="font-playground-bg-select">
+				<div class="white-background" onClick="changeColorTextarea('white');">
+					<p>color combination</p>
+				</div>
+				<div class="blue-background" onClick="changeColorTextarea('blue');">
+					<p>color combination</p>
+				</div>
+				<div class="black-background" onClick="changeColorTextarea('black');">
+					<p>color combination</p>
+				</div>
+			</div>
 			
 		</div>
 		
@@ -43,36 +54,36 @@
 	
 
 
-	<a  download="Anthropocene.otf" class="blinking download-button" >
+	<a id="scroll-to-download" onClick="scrollToDownload();"  download="Anthropocene.otf" class="blinking download-button" >
 	DOWNLOAD
 	</a>
 
 	<h3>Download the Font</h3>
 	<div class="download-section">
-		
+		<a id="download-bold"   download="Anthropocene-Bold.otf">
 			<div class="download-box download-bold">
 				<div class="cover">
-					<a id="download-bold"   download="Anthropocene-Bold.otf">a</a>
+					a
 				</div>
 				<p></p>download the bold version</p>
 			</div>
 		</a>
-		
+		<a id="download-thin"download="Anthropocene-Thin.otf">
 			<div class="download-box download-thin">
 				<div class="cover">
-					<a id="download-thin"download="Anthropocene-Thin.otf">a</a>
+					a
 				</div>
 				<p>download the thin version</p>
 			</div>
-		
-		
+		</a>
+		<a id="download-aqi" download="Anthropocene.otf" >
 			<div class="download-box download-aqi">
 				<div class="cover">
-					<a id="download-aqi" download="Anthropocene.otf" >a</a>
+					a
 				</div>
 				<p></p>download your AQI version</p>
 			</div>
-		
+		</a>
 
 	</div>
 	

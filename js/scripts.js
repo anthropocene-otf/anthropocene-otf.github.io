@@ -261,3 +261,24 @@ function changeFontSize(val){
     //console.log(val);
     $('#font-tryout').css("font-size",val+"em");
 }
+
+function changeColorTextarea(color) {
+    switch (color) {
+        case 'white':
+            $("#font-tryout").css("background-color","white")
+            $("#font-tryout").css("color","black");
+            break;
+        case 'blue':
+            $("#font-tryout").css("background-color","transparent")
+            $("#font-tryout").css("color","white");
+            break;
+        case 'black':
+            $("#font-tryout").css("background-color","black")
+            $("#font-tryout").css("color","white");
+            break;
+    }
+}
+
+function scrollToDownload() {
+    $(".content").animate({ scrollTop: $(".download-section").position().top }, "slow");
+}

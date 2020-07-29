@@ -132,7 +132,7 @@ a:hover {
 }
 
 .a-container {
-    margin-top:-10%;
+    margin-top:-5%;
     display: flex;
     padding-bottom: 50px;
 }
@@ -352,7 +352,9 @@ a:hover {
     resize: none;
     color: white;
     margin-bottom: 40px;
-    transition: font-size .5s;
+    transition: all .5s;
+    padding: 35px;
+    line-height: 1;
 }
 
 .font-playground-commands {
@@ -469,6 +471,27 @@ a:hover {
 }
 .font-playground-weight-selector>label{
     flex:1;
+}
+.font-playground-bg-select{
+    flex: 1;
+    display: flex;
+}
+
+.font-playground-bg-select div{
+    flex: 1;
+    text-align: center;
+}
+.white-background {
+    background-color: white;
+    color: black;
+}
+.black-background {
+    background-color: black;
+    color: white;
+}
+.blue-background {
+    background-color: #0b24fb;
+    color: white;
 }
 
 
@@ -696,13 +719,30 @@ svg {
 .download-box {
     flex: 1;
     text-align: center;
+    border: 3px solid;
+    margin: 5px;
+    transition: all .5s;
 }
+
+.download-box:hover {
+    background-color: yellow;
+    color: black;
+    border: 3px solid black;
+}
+
 .download-box, .download-box *:hover {
     cursor: url("../img/cursor_hover.png"), auto !important;
 }
 .download-box .cover {
     font-size: 3em;
 }
+.download-section  a {
+    color: white;
+    flex: 1;
+    text-decoration: none;
+    transition: all .5s;
+}
+
 .download-box .cover {
     cursor: url("../img/cursor_hover.png"), auto !important;
 }
@@ -712,10 +752,13 @@ svg {
 }
 .download-bold {
     font-family: "a-bold";
+    flex:1;
 }
 .download-thin {
     font-family: "a-thin";
+    flex:1;
 }
 .download-aqi {
     font-family: "Anthropocene";
+    flex:1;
 }
