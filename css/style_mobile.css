@@ -33,6 +33,7 @@ h3,
 h4,
 h5,
 h6 {
+    margin-bottom: 0;
     font-size: 2em;
     font-family: "a-thin";
 }
@@ -104,6 +105,8 @@ a:hover {
 .content {
     padding: 12px;
     overflow-y: scroll;
+    overflow-x: hidden;
+    color: white;
 }
 
 .a-bold {
@@ -566,7 +569,7 @@ input {
     height: 100%;
     width: 100%;
     opacity: 0.4;
-    opacity: .5;
+    opacity: .8;
 }
 
 #sky {
@@ -673,7 +676,23 @@ svg {
 .about-container {
     font-size: 1.2em;
 }
-
+.logo-container {
+    padding-top: 5%;
+    border-top: 2px solid;
+    display: flex;
+    align-items: center;
+}
+.logo-container div {
+    flex: 1;
+    text-align: center;
+}
+.logo-container div img {
+    width: 50%;
+}
+.logo-container p{
+    font-size: .4em;
+    text-align: left;
+}
 .code-container {
     padding: 15px;
     border: 1px solid;
@@ -683,11 +702,17 @@ svg {
     width: 100%;
     font-size: 1.2em;
 }
-
-.typeface-container {
-    padding: 10px;
-    border: 1px solid;
+.typeface-container-block {
+    display: flex;
+    margin: 10% 0;
 }
+.typeface-container {
+    flex: 1;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+}
+
 
 .concept-container {
     width: 100%;

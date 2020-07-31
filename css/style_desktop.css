@@ -38,6 +38,7 @@ h3,
 h4,
 h5,
 h6 {
+    margin-bottom: 0;
     font-size: 2.5em;
     font-family: "a-thin";
 }
@@ -669,6 +670,23 @@ svg {
     margin: 0 auto;
     font-size: 2em;
 }
+.logo-container {
+    padding-top: 5%;
+    border-top: 2px solid;
+    display: flex;
+    align-items: center;
+}
+.logo-container div {
+    flex: 1;
+    text-align: center;
+}
+.logo-container div img {
+    width: 50%;
+}
+.logo-container p {
+    font-size: .4em;
+    text-align: left;
+}
 
 .code-container {
     padding: 15px;
@@ -680,9 +698,12 @@ svg {
     margin: 0 auto;
     font-size: 2em;
 }
-
+.typeface-container-block {
+    display: flex;
+    margin: 10% 0;
+}
 .typeface-container {
-    font-family: "Anthropocene";
+    flex: 1;
     font-size: 1.5em;
     text-align: center;
     padding: 10px;
