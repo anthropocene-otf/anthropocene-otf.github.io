@@ -24,6 +24,7 @@ body {
 }
 
 h1 {
+    margin-bottom: 0;
     font-family: "a-thin";
     font-size: 2em;
 }
@@ -684,7 +685,8 @@ svg {
 }
 .logo-container div {
     flex: 1;
-    text-align: center;
+    text-align: right;
+    padding: 5px;
 }
 .logo-container div img {
     width: 50%;
