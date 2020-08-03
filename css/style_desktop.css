@@ -331,6 +331,7 @@ a:hover {
     position: fixed;
     top: 10px;
     right: 20px;
+    border-radius: 15px;
 }
 
 .download-button:hover {
@@ -346,6 +347,7 @@ a:hover {
 #font-tryout{
     flex: 1;
     background-color: transparent;
+    border-radius: 15px;
     border: none;
     border-bottom: 2px solid white;
     font-family: "a-bold";
@@ -482,6 +484,7 @@ a:hover {
 .font-playground-bg-select div{
     flex: 1;
     text-align: center;
+    border-radius: 15px;
 }
 .white-background {
     background-color: white;
@@ -692,6 +695,7 @@ svg {
 
 .code-container {
     padding: 15px;
+    border-radius:15px;
     border: 1px solid;
 }
 
@@ -745,6 +749,7 @@ svg {
     border: 3px solid;
     margin: 5px;
     transition: all .5s;
+    border-radius: 15px;
 }
 
 .download-box:hover {
