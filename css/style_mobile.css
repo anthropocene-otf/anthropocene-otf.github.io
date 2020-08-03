@@ -725,13 +725,54 @@ svg {
     margin: 0 auto;
     font-size: 1.2em;
 }
-
+.font-explainer {
+    display: flex;
+}
+.font-explainer div {
+    text-align: center;
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 0 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.font-explainer div p{
+    flex:1;
+}
 .a-bold-concept {
     font-family: "a-bold";
-    font-size: 2em;
+    font-size: 5em;
+    flex:1;
 }
 
 .a-thin-concept {
-    font-size: 2em;
+    font-size: 5em;
+    flex: 1;
     font-family: "a-thin";
+}
+.font-explainer-line {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 4px solid white;
+}
+
+
+.font-explainer-top {
+    flex: 1;
+    display: flex;
+    margin: 0 20px;
+}
+.font-explainer-top span {
+    flex: 1;
+    font-size: 6em;
+}
+
+.font-explainer-bottom {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    margin-top: 20px;
 }

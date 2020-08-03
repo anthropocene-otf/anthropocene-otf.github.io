@@ -1,23 +1,41 @@
 <div class="concept-container">
     <h1>The concept</h1>
-    <p>We wanted to develop a parametric font that, in its nature, was modified by the core concept that made us create it: <b>the impact of human carbon footprint</b>.<br>
+    <p class="padding-bottom">We wanted to develop a parametric font that, in its nature, was modified by the core concept that made us create it: <b>the impact of human carbon footprint</b>.<br>
         Therefore, the name Anthropocene.otf. The font changes the way it's seen dinamically thanks to an AQI of the nearest station control of the area where you're connecting from.
     </p>
     <h3>What is an AQI?</h3>
     <p>AQI stands for Air Quality Index and is used for daily reports of air quality by the connected stations around the world.
         The AQI is an average of various pollutants that are in the air and, if keept on a growing level, can become very hazardous for the humans biological functions.
     </p>
-    <p>We are currently using the <a href="https://aqicn.org/">aqicn.org</a> data</p>
+    <p class="padding-bottom">We are currently using the <a href="https://aqicn.org/">aqicn.org</a> data</p>
     <h3>How does this font reflects the AQI in your area?</h3>
     <p>
         This font will display as a <b>bolder</b> version in case the AQI is in good low values, while it will display itself more <b>thin</b> if the values are high.
     </p>
-    <div class="font-explainer">
-        <div>
-            <span class="a-bold-concept">a</span> &#8594; 0 AQI value = Very good Air condition
-        </div><br>
-        <div>
-            <span class="a-thin-concept">a</span> &#8594; 300 AQI value = Hazardous Air condition
+    <div class="font-explainer-line">
+        <div class="font-explainer-top">
+            <span >a</span>
+            <span style="
+            text-align: right;
+            font-family: 'a-thin';
+            ">a</span>
         </div>
+        <div class="font-explainer-bottom">
+            <div style="
+            flex: 1;
+            text-align: center;
+            ">0</div>
+            <div class="line" style="
+            flex: 10;
+            height: 1px;
+            background-color: white;
+            margin-left: -25px;
+            "></div>
+            <div style="
+            flex: 1;
+            text-align: center;
+            ">300</div>
+        </div>
+            
     </div>
 </div>

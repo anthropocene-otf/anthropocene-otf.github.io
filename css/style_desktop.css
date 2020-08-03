@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 0;
     font-family: "a-thin";
 }
@@ -40,7 +40,7 @@ h4,
 h5,
 h6 {
     margin-bottom: 0;
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: "a-thin";
 }
 
@@ -64,6 +64,10 @@ a:hover {
     -moz-animation: spin 11s linear infinite;
     animation: spin 11s linear infinite;
     transform-origin: 50% 50%;
+}
+
+.padding-bottom {
+    padding-bottom: 5%;
 }
 
 @-moz-keyframes spin {
@@ -107,7 +111,6 @@ a:hover {
 
 .content {
     width: 100%;
-    padding: 20px;
     overflow: auto;
     -ms-overflow-style: none;
     background: var(--main-color);
@@ -323,6 +326,7 @@ a:hover {
 }
 
 .download-button {
+    padding:5px;
     text-align: center;
     width: 300px;
     font-size: 1em;
@@ -689,6 +693,7 @@ svg {
     width: 50%;
 }
 .logo-container p {
+    margin: 15px;
     font-size: .4em;
     text-align: left;
 }
@@ -729,15 +734,57 @@ svg {
     margin: 0 auto;
     font-size: 2em;
 }
-
+.font-explainer {
+    display: flex;
+}
+.font-explainer div {
+    text-align: center;
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 0 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.font-explainer div p{
+    flex:1;
+}
 .a-bold-concept {
     font-family: "a-bold";
-    font-size: 2em;
+    font-size: 5em;
+    flex: 1;
 }
 
 .a-thin-concept {
-    font-size: 2em;
+    font-size: 5em;
     font-family: "a-thin";
+    flex: 1;
+}
+
+.font-explainer-line {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 4px solid white;
+}
+
+
+.font-explainer-top {
+    flex: 1;
+    display: flex;
+    margin: 0 20px;
+}
+.font-explainer-top span {
+    flex: 1;
+    font-size: 6em;
+}
+
+.font-explainer-bottom {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    margin-top: 20px;
 }
 
 .download-section {
