@@ -117,6 +117,9 @@ a:hover {
     font-size: 60vw;
     margin: -150px;
 }
+.a-bold p {
+    margin: 0;
+}
 
 .a-thin {
     font-family: "a-thin";
@@ -125,7 +128,9 @@ a:hover {
     font-size: 60vw;
     margin: -150px;
 }
-
+.a-thin p {
+    margin: 0;
+}
 .a-container {
     margin-top: 100px;
     display: flex;
@@ -333,6 +338,7 @@ input {
 }
 
 .download-button {
+    display: none;
     text-align: center;
     width: 300px;
     font-size: 1em;
@@ -357,7 +363,7 @@ input {
 
 #font-tryout{
     flex: 1;
-    background-color: transparent;
+    background-color: #0b24fb;
     border: none;
     border-bottom: 2px solid white;
     font-family: "a-bold";
@@ -365,6 +371,7 @@ input {
     outline: none;
     resize: none;
     color: white;
+    border-radius: 10px;
     margin-bottom: 40px;
     transition: all .5s;
     padding: 35px;
@@ -383,7 +390,8 @@ input {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
     width: 100%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
-  }
+    margin: 20px 0;
+}
   
   .font-playground-size-range[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -486,6 +494,9 @@ input {
 }
 .font-playground-weight-selector>label{
     flex:1;
+    border: 3px solid #ffffff00;
+    border-radius: 10px;
+    margin:5px;
 }
 .font-playground-bg-select{
     flex: 1;
@@ -496,6 +507,8 @@ input {
     flex: 1;
     text-align: center;
     border-radius: 10px;
+    margin:5px;
+    font-size: .7em;
 }
 .white-background {
     background-color: white;
@@ -709,7 +722,7 @@ svg {
     font-size: 1.2em;
 }
 .typeface-container-block {
-    display: flex;
+    display: none;
     margin: 10% 0;
 }
 .typeface-container {

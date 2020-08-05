@@ -188,8 +188,8 @@ function load_page(page) {
                 });
 
                 $(".font-playground-weight-selector>label").click(function(){
-                    $(".font-playground-weight-selector>label p").css("border-bottom","0")
-                    $("."+$(this).attr('class')+" p").css("border-bottom","1px solid")
+                    $(".font-playground-weight-selector>label").css("border","3px solid #ffffff00")
+                    $("."+$(this).attr('class')).css("border","3px solid #ffffff")
                         switch ($(this).attr('class')) {
                             case "font-playground-bold-select":
                                 $("#font-tryout").css("font-family","a-bold")
@@ -269,7 +269,7 @@ function changeColorTextarea(color) {
             $("#font-tryout").css("color","black");
             break;
         case 'blue':
-            $("#font-tryout").css("background-color","transparent")
+            $("#font-tryout").css("background-color","#0b24fb")
             $("#font-tryout").css("color","white");
             break;
         case 'black':

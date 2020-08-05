@@ -127,7 +127,9 @@ a:hover {
     font-size: 50vw;
     margin: -100px;
 }
-
+.a-bold p {
+    margin:0;
+}
 .a-thin {
     font-family: "a-thin";
     flex: 1;
@@ -135,9 +137,10 @@ a:hover {
     font-size: 50vw;
     margin: -100px;
 }
-
+.a-thin p {
+    margin:0;
+}
 .a-container {
-    margin-top:-5%;
     display: flex;
     padding-bottom: 50px;
 }
@@ -350,7 +353,7 @@ a:hover {
 
 #font-tryout{
     flex: 1;
-    background-color: transparent;
+    background-color: #0b24fb;
     border-radius: 15px;
     border: none;
     border-bottom: 2px solid white;
@@ -376,7 +379,8 @@ a:hover {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
     width: 100%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
-  }
+    margin:20px 0;
+}
   
   .font-playground-size-range[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -479,6 +483,9 @@ a:hover {
 }
 .font-playground-weight-selector>label{
     flex:1;
+    border: 3px solid #ffffff00;
+    border-radius: 15px;
+    margin:5px;
 }
 .font-playground-bg-select{
     flex: 1;
@@ -489,6 +496,7 @@ a:hover {
     flex: 1;
     text-align: center;
     border-radius: 15px;
+    margin:5px;
 }
 .white-background {
     background-color: white;
@@ -497,6 +505,7 @@ a:hover {
 .black-background {
     background-color: black;
     color: white;
+    
 }
 .blue-background {
     background-color: #0b24fb;
