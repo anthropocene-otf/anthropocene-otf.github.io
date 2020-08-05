@@ -32,9 +32,14 @@ async function get_aqi_data() {
     } else if (response.data.aqi >= 300) {
         bg_color = colors.hazardous
         response.data.aqi = 300
+    } else {
+        response.data.aqi = 150
     }
+    
     populate('aqi', response.data.aqi);
-
+    if (response.data.city.name != " " && response.data.city.name != "") {
+        $("#aqi-city").text(response.data.city.name)
+    }
     change_smile_mood(response.data.aqi);
 
     for (const element in response.data.iaqi) {
@@ -95,6 +100,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $("body").on("click", function() {
         $("#sky-resp")[0].autoplay = true
     })
+
+    document.querySelector(".info-container-values").addEventListener("mousemove", showHelper);
+
 });
 
 
@@ -281,4 +289,32 @@ function changeColorTextarea(color) {
 
 function scrollToDownload() {
     $(".content").animate({ scrollTop: $(".download-section").position().top }, "slow");
+}
+
+
+
+var favicon_images = ["../img/a_0.png","../img/a_5.png","../img/a_10.png","../img/a_5.png"]
+    image_counter = 0;
+
+setInterval(function() {
+  $("link[rel='icon']").remove();
+  $("link[rel='shortcut icon']").remove();
+  $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+  if(image_counter == favicon_images.length -1)
+    image_counter = 0;
+  else
+    image_counter++;
+}, 500);
+
+
+
+
+function showHelper(e) {
+    var x_pos = e.clientX;
+    var y_pos = e.clientY;
+    var height = $(".tooltiptext").height();
+
+    $(".tooltiptext").css("top",(y_pos-height)+"px")
+    $(".tooltiptext").css("left",x_pos+"px")
 }

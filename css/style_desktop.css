@@ -510,7 +510,9 @@ a:hover {
 .blue-background {
     background-color: #0b24fb;
     color: white;
+    border: 3px solid;
 }
+
 
 
 /********/
@@ -633,7 +635,22 @@ svg {
     flex-direction: column;
     font-family: "a-thin";
 }
-
+.info-container-values .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+.info-container-values:hover .tooltiptext {
+    visibility: visible;
+  }
 .info-container-values div {
     margin: 5px 0;
     cursor: url("../img/cursor.png"), auto;
@@ -720,11 +737,11 @@ svg {
 }
 .typeface-container-block {
     display: flex;
-    margin: 10% 0;
+
 }
 .typeface-container {
     flex: 1;
-    font-size: 1.5em;
+    font-size: 3vw;
     text-align: center;
     padding: 10px;
 }
@@ -775,7 +792,7 @@ svg {
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    border: 4px solid white;
+
 }
 
 
@@ -793,9 +810,12 @@ svg {
     align-items: center;
     display: flex;
     flex: 1;
-    margin-top: 20px;
+    margin-bottom: 7%;
+    margin-top:-5%;
 }
-
+.font-explainer-bottom .line {
+    margin-left: -25px;
+}
 .download-section {
     display: flex;
 }
@@ -819,6 +839,9 @@ svg {
 }
 .download-box .cover {
     font-size: 3em;
+}
+.download-box>p {
+    padding-bottom: 10%;
 }
 .download-section  a {
     color: white;
