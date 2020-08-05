@@ -635,7 +635,7 @@ svg {
     flex-direction: column;
     font-family: "a-thin";
 }
-.info-container-values .tooltiptext {
+.tooltiptext {
     visibility: hidden;
     width: 300px;
     background-color: black;

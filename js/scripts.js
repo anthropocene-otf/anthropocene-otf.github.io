@@ -314,7 +314,7 @@ function showHelper(e) {
     var x_pos = e.clientX;
     var y_pos = e.clientY;
     var height = $(".tooltiptext").height();
-
-    $(".tooltiptext").css("top",(y_pos-height)+"px")
-    $(".tooltiptext").css("left",x_pos+"px")
+    //$(".tooltiptext").css("visibility","visible")
+    $(".tooltiptext").css("top",(y_pos-height)-30+"px")
+    $(".tooltiptext").css("left",(x_pos+30)+"px")
 }

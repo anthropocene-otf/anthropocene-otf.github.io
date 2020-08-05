@@ -706,8 +706,11 @@ svg {
     text-align: right;
     padding: 5px;
 }
+.logo-container div:nth-child(even) {
+    flex: 2;
+}
 .logo-container div img {
-    width: 50%;
+    width: 100%;
 }
 .logo-container p{
     font-size: .4em;
@@ -724,12 +727,12 @@ svg {
     font-size: 1.2em;
 }
 .typeface-container-block {
-    display: none;
-    margin: 10% 0;
+    display: block;
+    margin: 5% 0;
 }
 .typeface-container {
     flex: 1;
-    font-size: 1em;
+    font-size: 2em;
     text-align: center;
     padding: 10px;
 }
@@ -788,9 +791,12 @@ svg {
     align-items: center;
     display: flex;
     flex: 1;
-    margin-top:-5%;
+    margin-top:-15%;
     margin-bottom: 7%;
 }
 .font-explainer-bottom .line {
     margin-left: 0;
+}
+.tooltiptext {
+    display: none;
 }
