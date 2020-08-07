@@ -735,7 +735,7 @@ svg {
 }
 .typeface-container {
     flex: 1;
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
     padding: 10px;
 }
