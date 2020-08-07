@@ -11,7 +11,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, var(--main-color), rgb(255, 255, 255) 80%);
+    background: linear-gradient(180deg, var(--main-color), black);
     font-family: "a-bold";
 }
 
@@ -132,9 +132,9 @@ a:hover {
     margin: 0;
 }
 .a-container {
-    margin-top: 100px;
+    margin-top: 50%;
     display: flex;
-    padding-bottom: 125px;
+    padding-bottom: 10%;
 }
 
 
@@ -587,8 +587,11 @@ input {
     object-fit: fill;
     height: 100%;
     width: 100%;
-    opacity: 0.4;
-    opacity: .8;
+    opacity: 0.7;
+
+}
+#sky-resp {
+    pointer-events: none;
 }
 
 #sky {
