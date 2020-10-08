@@ -1,4 +1,5 @@
-#Anthropocene.otf
+# Anthropocene.otf
+
 ![cover](img/cover.jpg)
 **Anthropocene.otf** is a free parametric typeface that is linked to an air quality index which dynamically and constantly changes its design, following your local current air status trends.
 
