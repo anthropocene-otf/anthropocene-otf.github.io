@@ -46,14 +46,36 @@ async function get_aqi_data() {
         populate(element, response.data.iaqi[element].v);
     }
 
-    font_value = parseInt((response.data.aqi).map(0, 300, 0, 100));
+    font_value = parseInt((response.data.aqi).map(0, 300, 100, 0));
 
     new_font_face(font_value);
 }
 
 function new_font_face(font_value) {
-
-    console.log("This site is using the Anthropocene font, find more about it http://anthropoceneotf.org")
+    console.log(`                 .*(%@@@@@@@@&%(*.                
+        ./@@@@@@@@@@@@@@@@@@@@@@@@@@@#,         
+     *&@@@@@@@@@#/*,.     ..,*(%@@@@@@@@@(      
+   (@@@@@@@@*                      *&@@@@@@%.   
+ .@@@@@@@%.                           (@@@@@@.  
+*@@@@@@@/                              .@@@@@@. 
+.%@@@@@@#                                *@@@@@# 
+   ,#@@.                                (@@@@@& 
+                                    ./&@@@@@@@& 
+                    ..,,*/((##%@@@@@@@@&*&@@@@& 
+       ,(&&@@@@@@@@@@@@@@@@@@@@@@@@@@/  ,@@@@@& 
+  .#@@@@@@@@@@@@@@@@@@@@@@@@@&%/.       ,@@@@@& 
+*@@@@@@@@@%(*.                          ,@@@@@& 
+#@@@@@@#.                                ,@@@@@& 
+/@@@@@&.                                  *@@@@@& 
+&@@@@@.                                   &@@@@@& 
+@@@@@&                                  .&@@@@@@& 
+%@@@@@*                                *@@@@@@@@& 
+&@@@@@(                             #@@@@*@@@@@& 
+.%@@@@@@#.                      *%@@@@&, /@@@@@& 
+  #@@@@@@@@&#/,.     .,*(#%@@@@@@@@/    #@@@@@&.
+     (&@@@@@@@@@@@@@@@@@@@@@@@@/.       #@@@@@@*
+          .*(%&&&&&&&%#/,                       `)
+    console.log("This site is using the Anthropocene font, find more about it https://anthropocene-otf.github.io/")
     console.log("Your current AQI (Air  Quality Index) is " + font_value + ", read more about it here https://aqicn.org/faq/")
     var new_face = document.createElement('style');
     new_face.appendChild(document.createTextNode("\
@@ -120,8 +142,8 @@ function download_font() {
 
 function set_download_link() {
     console.log("download")
-    $("#download-bold").attr("href","../cdn/fonts/Anthropocene-1.otf")
-    $("#download-thin").attr("href","../cdn/fonts/Anthropocene-100.otf")
+    $("#download-bold").attr("href","../cdn/fonts/Anthropocene-100.otf")
+    $("#download-thin").attr("href","../cdn/fonts/Anthropocene-1.otf")
     $("#download-aqi").attr("href", "cdn/fonts/Anthropocene-" + font_value + ".otf")
 }
 

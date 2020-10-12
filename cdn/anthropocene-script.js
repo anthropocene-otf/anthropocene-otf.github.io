@@ -49,7 +49,7 @@ function changeFont(num){
     #@@@@@@@@&#/,.     .,*(#%@@@@@@@@/    #@@@@@&.
        (&@@@@@@@@@@@@@@@@@@@@@@@@/.       #@@@@@@*
             .*(%&&&&&&&%#/,                       `)
-    console.log("This site is using the Anthropocene font, find more about it http://anthropoceneotf.org")
+    console.log("This site is using the Anthropocene font, find more about it https://anthropocene-otf.github.io/")
     console.log("Your current AQI (Air  Quality Index) is "+num+", read more about it here https://aqicn.org/faq/")
     var userairdata = num
     userairdata >= 300 ? userairdata = 300 : userairdata = userairdata;
