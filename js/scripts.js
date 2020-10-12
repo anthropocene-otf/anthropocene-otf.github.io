@@ -52,29 +52,7 @@ async function get_aqi_data() {
 }
 
 function new_font_face(font_value) {
-    console.log(`                 .*(%@@@@@@@@&%(*.                
-        ./@@@@@@@@@@@@@@@@@@@@@@@@@@@#,         
-     *&@@@@@@@@@#/*,.     ..,*(%@@@@@@@@@(      
-   (@@@@@@@@*                      *&@@@@@@%.   
- .@@@@@@@%.                           (@@@@@@.  
-*@@@@@@@/                              .@@@@@@. 
-.%@@@@@@#                                *@@@@@# 
-   ,#@@.                                (@@@@@& 
-                                    ./&@@@@@@@& 
-                    ..,,*/((##%@@@@@@@@&*&@@@@& 
-       ,(&&@@@@@@@@@@@@@@@@@@@@@@@@@@/  ,@@@@@& 
-  .#@@@@@@@@@@@@@@@@@@@@@@@@@&%/.       ,@@@@@& 
-*@@@@@@@@@%(*.                          ,@@@@@& 
-#@@@@@@#.                                ,@@@@@& 
-/@@@@@&.                                  *@@@@@& 
-&@@@@@.                                   &@@@@@& 
-@@@@@&                                  .&@@@@@@& 
-%@@@@@*                                *@@@@@@@@& 
-&@@@@@(                             #@@@@*@@@@@& 
-.%@@@@@@#.                      *%@@@@&, /@@@@@& 
-  #@@@@@@@@&#/,.     .,*(#%@@@@@@@@/    #@@@@@&.
-     (&@@@@@@@@@@@@@@@@@@@@@@@@/.       #@@@@@@*
-          .*(%&&&&&&&%#/,                       `)
+
     console.log("This site is using the Anthropocene font, you can find more about it https://anthropocene-otf.github.io/")
     console.log("Your current AQI (Air  Quality Index) is " + font_value + ", read more about it here https://aqicn.org/faq/")
     var new_face = document.createElement('style');
