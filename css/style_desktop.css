@@ -1,11 +1,11 @@
 @font-face {
     font-family: "a-bold";
-    src: url("../cdn/fonts/Anthropocene-1.otf");
+    src: url("../cdn/fonts/Anthropocene-100.otf");
 }
 
 @font-face {
     font-family: "a-thin";
-    src: url("../cdn/fonts/Anthropocene-100.otf");
+    src: url("../cdn/fonts/Anthropocene-1.otf");
 }
 html {
     cursor: url("../img/cursor.png"), auto;
