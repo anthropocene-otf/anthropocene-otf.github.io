@@ -25,6 +25,11 @@
 	});
 })();
 
+/* Helper prototype per rimappare i valori */
+Number.prototype.map = function(in_min, in_max, out_min, out_max) {
+    return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
 function changeFont(num){
     console.log(`                 .*(%@@@@@@@@&%(*.                
           ./@@@@@@@@@@@@@@@@@@@@@@@@@@@#,         
@@ -54,11 +59,12 @@ function changeFont(num){
     var userairdata = num
     userairdata >= 300 ? userairdata = 300 : userairdata = userairdata;
     var userairdataPercentage = Math.floor((userairdata/300) *100)
+    var font_value = parseInt((response.data.aqi).map(0, 300, 100, 0));
     var newStyle = document.createElement('style');
     newStyle.appendChild(document.createTextNode("\
     @font-face {\
         font-family: Anthropocene;\
-        src: url('https://anthropocene-otf.github.io/cdn/fonts/Anthropocene-" + userairdataPercentage + ".otf') format('opentype');\
+        src: url('https://anthropocene-otf.github.io/cdn/fonts/Anthropocene-" + font_value + ".otf') format('opentype');\
     }\
     "));
 
