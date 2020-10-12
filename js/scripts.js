@@ -46,7 +46,7 @@ async function get_aqi_data() {
         populate(element, response.data.iaqi[element].v);
     }
 
-    font_value = parseInt((response.data.aqi).map(0, 300, 100, 0));
+    font_value = parseInt((response.data.aqi).map(0, 300, 0, 100));
 
     new_font_face(font_value);
 }
@@ -142,8 +142,8 @@ function download_font() {
 
 function set_download_link() {
     console.log("download")
-    $("#download-bold").attr("href","../cdn/fonts/Anthropocene-100.otf")
-    $("#download-thin").attr("href","../cdn/fonts/Anthropocene-1.otf")
+    $("#download-bold").attr("href","../cdn/fonts/Anthropocene-1.otf")
+    $("#download-thin").attr("href","../cdn/fonts/Anthropocene-100.otf")
     $("#download-aqi").attr("href", "cdn/fonts/Anthropocene-" + font_value + ".otf")
 }
 
